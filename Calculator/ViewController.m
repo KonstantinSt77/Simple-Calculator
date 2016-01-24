@@ -17,10 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *firstOperantTextField;
 @property (weak, nonatomic) IBOutlet UITextField *secondOperantTextField;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
-
-
 @property (assign, nonatomic) NSInteger firstNum;
-
 
 - (IBAction)add:(id)sender;
 - (IBAction)subb:(id)sender;
@@ -40,19 +37,15 @@
 - (IBAction)null:(id)sender;
 - (IBAction)five:(id)sender;
 - (IBAction)equal:(id)sender;
-
 @end
+
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     UITapGestureRecognizer *tapView = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endEditing)];
     [self.view addGestureRecognizer:tapView];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -229,25 +222,14 @@
     firsttext = @"";
    secondText = @"";
 }
-
-
 - (IBAction)powin2:(id)sender {
-    
     NSInteger first = [firsttext integerValue];
     float result = pow(first,2);
-    
     self.resultLabel.text = [NSString stringWithFormat:@"%f", result];
 }
-
 - (IBAction)powin3:(id)sender {
-    
     NSInteger first = [firsttext integerValue];
     float result = pow(first,3);
-    
     self.resultLabel.text = [NSString stringWithFormat:@"%f", result];
-    
 }
-
-
-
 @end
